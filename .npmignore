@@ -1,0 +1,6 @@
+testapp/
+spec/
+test.js
+test_util.js
+.npmignore
+npm-debug.log

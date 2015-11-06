@@ -1,0 +1,41 @@
+{
+  "name": "protractor-accessibility-plugin",
+  "version": "0.1.0",
+  "description": "Runs a set of accessibility audits",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/httpster/bin/httpster -d testapp/ -p `node -p 'process.env.HTTP_PORT || require(\"./spec/environment\").webServerDefaultPort'`",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/protractor-accessibility-plugin"
+  },
+  "keywords": [
+    "angular",
+    "test",
+    "testing",
+    "webdriver",
+    "webdriverjs",
+    "selenium",
+    "protractor",
+    "protractor-plugin"
+  ],
+  "author": "Marcy Sutton (marcy@substantial.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/protractor-accessibility-plugin/issues"
+  },
+  "homepage": "https://github.com/angular/protractor-accessibility-plugin",
+  "dependencies": {
+    "accessibility-developer-tools": "^2.9.0-rc.0",
+    "html-entities": "^1.2.0",
+    "lodash": "^3.10.1",
+    "q": "^1.4.1",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {
+    "httpster": "^1.0.1",
+    "protractor": "^2.5.1"
+  }
+}
