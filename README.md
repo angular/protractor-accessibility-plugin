@@ -41,7 +41,7 @@ Enable this plugin in your config file:
         chromeA11YDevTools: {
           treatWarningsAsFailures: true
         },
-        path: 'node_modules/protractor/plugins/accessibility'
+        package: 'protractor-accessibility-plugin'
       }]
     }
 ```
@@ -58,7 +58,7 @@ Enable this plugin in your config file:
           printAll: false, // whether the plugin should log API response
         },
         chromeA11YDevTools: true,
-        path: 'node_modules/protractor/plugins/accessibility'
+        package: 'protractor-accessibility-plugin'
       }]
     }
 ```
