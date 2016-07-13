@@ -28,6 +28,15 @@ executor.addCommandlineTest(
     },
     {
       message: '1 element failed:'
+    },
+    {
+      message: '3 elements failed:'
+    },
+    {
+      message: '1 element failed:'
+    },
+    {
+      message: '1 element failed:'
     }]);
 
 executor.execute();
