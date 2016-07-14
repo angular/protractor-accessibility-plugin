@@ -1,8 +1,9 @@
 Accessibility Plugin
 ====================
 
-Protractor comes with support for two accessibility testing options:
+Protractor comes with support for three accessibility testing options:
  * Accessibility Developer Tools
+ * aXe Accessibility Engine
  * Tenon.io
 
 Protractor will run each set of audits (depending on your configuration) on your existing end-to-end
@@ -14,14 +15,17 @@ To understand how each of these tools can be used, see this support matrix:
 
 | Testing Library                      | Pricing                                   | API Key | External Request | No. of Tests | Info                                                                    |
 |--------------------------------------|-------------------------------------------|---------|------------------|--------------|-------------------------------------------------------------------------|
-| Chrome Accessibility Developer Tools | Free                                      | No      | No               | 14           | [Github](https://github.com/GoogleChrome/accessibility-developer-tools) |
-| Tenon.io                             | Free limited accounts, paid subscriptions | Yes     | Yes              | 63           | [Tenon.io](http://tenon.io/)                                            |
+| Chrome Accessibility Developer Tools | Free                                      | No      | No               | 14           | [GitHub](https://github.com/GoogleChrome/accessibility-developer-tools) |
+| aXe Accessibility Engine             | Free                                      | No      | No               | 53           | [GitHub](https://github.com/dequelabs/axe-core/)    
+| Tenon.io                             | Free limited accounts, paid subscriptions | Yes     | Yes              | 63           | [Tenon.io](http://tenon.io/)                                            |                                        |
 
 Protractor now supports the [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools), the same audit library used by the [Chrome browser extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en). Protractor
 [runs an audit](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules)
 locally by injecting the Dev Tools script into WebDriver pages, and it can diagnose issues including
 missing labels, incorrect ARIA attributes and color contrast. This is a great starting point if
 you can't send source code over the wire through an API.
+
+[aXe](https://github.com/dequelabs/axe-core) operates similarly to Chrome's Accessibility Developer Tools by injecting axe-core into all frames and checking the content against 53 [accessibility rules](https://github.com/dequelabs/axe-core/blob/master/doc/rule-descriptions.md).
 
 [Tenon.io](http://www.tenon.io) has a more robust set of tests to help you find
 accessibility issues, but it requires [registering](http://tenon.io/register.php) for an API key
@@ -41,6 +45,16 @@ Enable this plugin in your config file:
         chromeA11YDevTools: {
           treatWarningsAsFailures: true
         },
+        package: 'protractor-accessibility-plugin'
+      }]
+    }
+```
+```js
+  // aXe only:
+  exports.config = {
+      ...
+      plugins: [{
+        axe: true,
         package: 'protractor-accessibility-plugin'
       }]
     }
