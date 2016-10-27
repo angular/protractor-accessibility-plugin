@@ -164,7 +164,7 @@ function runChromeDevTools(context) {
 
   var testHeader = 'Chrome A11Y - ';
 
-  return browser.executeScript_(data, 'a11y developer tool rules').then(function(results) {
+  return browser.executeScriptWithDescription(data, 'a11y developer tool rules').then(function(results) {
 
     var audit = results.map(function(result) {
       var DOMElements = result.elements;
