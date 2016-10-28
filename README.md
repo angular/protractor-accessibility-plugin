@@ -39,7 +39,27 @@ Enable this plugin in your config file:
       ...
       plugins: [{
         chromeA11YDevTools: {
-          treatWarningsAsFailures: true
+          treatWarningsAsFailures: true,
+          auditConfiguration: {
+            auditRulesToRun: [
+              'audioWithoutControls',
+              'badAriaAttributeValue',
+              'badAriaRole',
+              'controlsWithoutLabel',
+              'elementsWithMeaningfulBackgroundImage',
+              'focusableElementNotVisibleAndNotAriaHidden',
+              'imagesWithoutAltText',
+              'linkWithUnclearPurpose',
+              'lowContrastElements',
+              'mainRoleOnInappropriateElement',
+              'nonExistentAriaLabelledbyElement',
+              'pageWithoutTitle',
+              'requiredAriaAttributeMissing',
+              'unfocusableElementsWithOnClick',
+              'videoWithoutCaptions'
+            ],
+            auditRulesToSkip: []
+          }
         },
         package: 'protractor-accessibility-plugin'
       }]

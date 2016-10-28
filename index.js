@@ -1,7 +1,7 @@
 var q = require('q'),
     fs = require('fs'),
     path = require('path'),
-    _ = require('lodash');
+    _ = require('lodash'),
     request = require('request'),
     Entities = require('html-entities').XmlEntities;
 
@@ -148,7 +148,7 @@ function runTenonIO(context) {
 function runChromeDevTools(context) {
 
   var data = fs.readFileSync(AUDIT_FILE, 'utf-8');
-  data = data + ' return axs.Audit.run();';
+  data = data + ' var configuration = new axs.AuditConfiguration(' + JSON.stringify(context.config.chromeA11YDevTools.auditConfiguration) + '); return axs.Audit.run(configuration);';
 
   var elementPromises = [],
       elementStringLength = 200;
