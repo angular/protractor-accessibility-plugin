@@ -36,6 +36,6 @@
   },
   "devDependencies": {
     "httpster": "^1.0.1",
-    "protractor": "^2.5.1"
+    "protractor": "^4.0.10"
   }
 }
