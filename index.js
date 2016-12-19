@@ -245,7 +245,7 @@ function runAxe(context) {
 
   var deferred = q.defer();
 
-  AxeBuilder(browser.driver)
+  AxeBuilder(browser.driver).options(context.config.axe)
     .analyze(function(results) {
       deferred.resolve(results);
     });
