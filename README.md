@@ -56,13 +56,12 @@ Enable this plugin in your config file:
               'linkWithUnclearPurpose',
               'lowContrastElements',
               'mainRoleOnInappropriateElement',
-              'nonExistentAriaLabelledbyElement',
               'pageWithoutTitle',
               'requiredAriaAttributeMissing',
               'unfocusableElementsWithOnClick',
               'videoWithoutCaptions'
             ],
-            auditRulesToSkip: []
+            auditRulesToIgnore: []
           }
         },
         package: 'protractor-accessibility-plugin'
