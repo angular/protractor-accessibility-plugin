@@ -178,7 +178,7 @@ function runChromeDevTools(context) {
         DOMElements.forEach(function(elem) {
           // get elements from WebDriver, add to promises array
           elementPromises.push(
-            elem.getOuterHtml().then(function(text) {
+            elem.getAttribute('outerHTML').then(function(text) {
               return {
                 code: result.rule.code,
                 list: trimText(text)
