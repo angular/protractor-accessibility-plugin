@@ -54,7 +54,7 @@ var TENON_URL = 'http://www.tenon.io/api/';
  * @return {q.Promise} A promise which resolves when all audits are finished
  * @public
  */
-function teardown() {
+function runAudits() {
 
   var audits = [];
 
@@ -71,6 +71,13 @@ function teardown() {
     audits.push(runTenonIO(this));
   }
   return q.all(audits);
+}
+
+// Run audits on page load if we're not waiting for angular.
+function onPageLoad() {
+  if (browser.ignoreSynchronization) {
+    runAudits();
+  }
 }
 
 var entities = new Entities();
@@ -282,4 +289,5 @@ function runAxe(context) {
 }
 
 // Export
-exports.teardown = teardown;
+exports.onPageLoad = onPageLoad;
+exports.onPageStable = runAudits;
