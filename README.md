@@ -17,7 +17,7 @@ To understand how each of these tools can be used, see this support matrix:
 |--------------------------------------|-------------------------------------------|---------|------------------|--------------|-------------------------------------------------------------------------|
 | Chrome Accessibility Developer Tools | Free                                      | No      | No               | 14           | [GitHub](https://github.com/GoogleChrome/accessibility-developer-tools) |
 | aXe Accessibility Engine             | Free                                      | No      | No               | 53           | [GitHub](https://github.com/dequelabs/axe-core/)    
-| Tenon.io                             | Free limited accounts, paid subscriptions | Yes     | Yes              | 63           | [Tenon.io](http://tenon.io/)                                            |                                        |
+| Tenon.io                             | Free limited accounts, paid subscriptions | Yes     | Yes              | 74           | [Tenon.io](http://tenon.io/)                                            |                                        |
 
 Protractor now supports the [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools), the same audit library used by the [Chrome browser extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en). Protractor
 [runs an audit](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules)
