@@ -44,26 +44,6 @@ Enable this plugin in your config file:
       plugins: [{
         chromeA11YDevTools: {
           treatWarningsAsFailures: true,
-          auditConfiguration: {
-            auditRulesToRun: [
-              'audioWithoutControls',
-              'badAriaAttributeValue',
-              'badAriaRole',
-              'controlsWithoutLabel',
-              'elementsWithMeaningfulBackgroundImage',
-              'focusableElementNotVisibleAndNotAriaHidden',
-              'imagesWithoutAltText',
-              'linkWithUnclearPurpose',
-              'lowContrastElements',
-              'mainRoleOnInappropriateElement',
-              'nonExistentAriaLabelledbyElement',
-              'pageWithoutTitle',
-              'requiredAriaAttributeMissing',
-              'unfocusableElementsWithOnClick',
-              'videoWithoutCaptions'
-            ],
-            auditRulesToSkip: []
-          }
         },
         package: 'protractor-accessibility-plugin'
       }]
@@ -91,7 +71,6 @@ Enable this plugin in your config file:
           },
           printAll: false, // whether the plugin should log API response
         },
-        chromeA11YDevTools: true,
         package: 'protractor-accessibility-plugin'
       }]
     }
