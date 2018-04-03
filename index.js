@@ -21,6 +21,15 @@ var q = require('q'),
  *      }]
  *    }
  *
+ *   // aXe:
+ *   exports.config = {
+ *     ...
+ *     plugins: [{
+ *       axe: true,
+ *       package: 'protractor-accessibility-plugin'
+ *     }]
+ *   }
+ * 
  *    // Tenon.io:
  *
  *    //  Read about the Tenon.io settings and API requirements:
@@ -36,7 +45,6 @@ var q = require('q'),
  *          },
  *          printAll: false, // whether the plugin should log API response
  *        },
- *        chromeA11YDevTools: false,
  *        path: 'node_modules/protractor/plugins/accessiblity'
  *      }]
  *    }
